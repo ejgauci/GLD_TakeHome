@@ -26,11 +26,14 @@ public class GameManager : MonoBehaviour
 
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         pandoraBox.gameObject.SetActive(false);
         StartCoroutine("DecreaseHealth");
+
     }
 
    
@@ -97,6 +100,9 @@ public class GameManager : MonoBehaviour
 
         health += randomHealth;
         pandoraBox.gameObject.SetActive(false);
+
+        GameObject.Find("Building02").GetComponent<factoryScript>().setActive(false);
+
         GameObject.Find("MenuCanvas").GetComponent<menuController>().pandoraMenu.gameObject.SetActive(false);
     }
 

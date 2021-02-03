@@ -13,6 +13,10 @@ public class factoryScript : MonoBehaviour
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
+    public void setActive(bool pA)
+    {
+        pandoraActive = pA;
+    }
    
 
     private void OnTriggerEnter(Collider other)
