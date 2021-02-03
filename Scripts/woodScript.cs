@@ -27,7 +27,7 @@ public class woodScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        print("Exit Gold Zone");
+        print("Exit wood Zone");
         GameObject.Find("MenuCanvas").GetComponent<menuController>().woodMenu.gameObject.SetActive(false);
         playerIsInWood = false;
     }

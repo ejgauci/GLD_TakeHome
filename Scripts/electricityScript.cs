@@ -67,7 +67,7 @@ public class electricityScript : MonoBehaviour
                     gm.stopTurbine();
 
                     GameObject.Find("MenuCanvas").GetComponent<menuController>().electricityMenuStop.gameObject.SetActive(false);
-                    GameObject.Find("MenuCanvas").GetComponent<menuController>().electricityMenuStart.gameObject.SetActive(false);
+                    GameObject.Find("MenuCanvas").GetComponent<menuController>().electricityMenuStart.gameObject.SetActive(true);
                 }
 
 

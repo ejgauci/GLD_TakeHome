@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
 
         health += randomHealth;
         pandoraBox.gameObject.SetActive(false);
+        GameObject.Find("MenuCanvas").GetComponent<menuController>().pandoraMenu.gameObject.SetActive(false);
     }
     
 }

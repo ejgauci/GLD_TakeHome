@@ -34,17 +34,13 @@ public class pandoraScript : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                print("Took 10 iron");
-
+                print("pandora open");
+                playerIsInPandora = false;
                 gm.openPandora();
 
 
             }
 
-        }
-        else
-        {
-            GameObject.Find("MenuCanvas").GetComponent<menuController>().pandoraMenu.gameObject.SetActive(false);
         }
     }
 
