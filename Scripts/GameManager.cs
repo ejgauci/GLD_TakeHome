@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -98,5 +99,29 @@ public class GameManager : MonoBehaviour
         pandoraBox.gameObject.SetActive(false);
         GameObject.Find("MenuCanvas").GetComponent<menuController>().pandoraMenu.gameObject.SetActive(false);
     }
+
+    public void addCoin()
+    {
+        coins++;
+        coinsText.text = "COINS:" + coins;
+    }
+
+    public void hitByCar()
+    {
+        health = 0;
+    }
+
+
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            print("death scene");
+
+            SceneManager.LoadScene(1);
+        }
+    }
+
     
+
 }
