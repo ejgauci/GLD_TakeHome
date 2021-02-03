@@ -8,6 +8,8 @@ public class electricityScript : MonoBehaviour
     GameManager gm;
     public bool turbineActive = false;
 
+    [SerializeField] private Animator myAnimationController;
+
     private void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -59,6 +61,8 @@ public class electricityScript : MonoBehaviour
 
                     GameObject.Find("MenuCanvas").GetComponent<menuController>().electricityMenuStart.gameObject.SetActive(false);
                     GameObject.Find("MenuCanvas").GetComponent<menuController>().electricityMenuStop.gameObject.SetActive(true);
+
+                    myAnimationController.SetBool("playSpin", true);
                 }
                 else
                 {
@@ -68,6 +72,8 @@ public class electricityScript : MonoBehaviour
 
                     GameObject.Find("MenuCanvas").GetComponent<menuController>().electricityMenuStop.gameObject.SetActive(false);
                     GameObject.Find("MenuCanvas").GetComponent<menuController>().electricityMenuStart.gameObject.SetActive(true);
+
+                    myAnimationController.SetBool("playSpin", false);
                 }
 
 
